@@ -4,13 +4,13 @@ import org.testng.annotations.Test;
 
 public class ExcelDataProvider {
 
-    //@Test(dataProvider = "customerlist")
+    @Test(dataProvider = "customerlist")
     public void customer(String firstname, String lastname, String passcode)
     {
         System.out.println(firstname+" | "+lastname+" | "+passcode);
     }
 
-    //@DataProvider(name = "customerlist")
+    @DataProvider(name = "customerlist")
     public Object[][] getData(){
         String projectPath = System.getProperty("user.dir");
         String excelPath = projectPath+"/excel/customerlist.xlsx";
